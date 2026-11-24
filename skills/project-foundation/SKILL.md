@@ -1,6 +1,7 @@
 ---
 name: project-foundation
 description: Set up or audit the foundation of a software project in any language — codebase structure (folders, architecture, boundaries, types) and static analysis (formatter, linter, type checker, tests, CI, agent hooks) — while teaching the user the judgment behind each choice. Use this whenever the user is starting a new project or repo, picking a stack or libraries, asking how to organize folders or files, configuring lint/types/formatting, adopting an unfamiliar language, or says their codebase feels messy and AI keeps copying bad patterns — even if they never say "foundation" or "setup".
+license: MIT
 ---
 
 # Project Foundation

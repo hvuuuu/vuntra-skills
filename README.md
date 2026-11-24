@@ -4,8 +4,7 @@ Agent skills for coding with AI, following the open [Agent Skills](https://agent
 
 ## Skills
 
-| Skill | What it does |
-|---|---|
+| Skill | What it does ||---|---|
 | [`project-foundation`](skills/project-foundation/SKILL.md) | Sets up or audits a project's foundation in any language: codebase structure (architecture, folders, boundaries, types) and static analysis (formatter, linter, types, tests, CI, agent hooks), while teaching the judgment behind each choice. |
 
 ## Install
