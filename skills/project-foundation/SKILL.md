@@ -18,7 +18,7 @@ The user is often still building judgment. The goal is not only a working setup 
 ## Modes
 
 - **New project** — run steps 0 → 5 in order.
-- **Existing project audit** — run step 0, then audit against steps 1–4 (what's missing, what's inconsistent, what's slop), propose fixes ranked by leverage, then step 5.
+- **Existing project audit** — run step 0 (with early findings), then audit against steps 1–4 (what's missing, what's inconsistent, what's slop), propose fixes ranked by leverage, then step 5.
 - **Single question** ("which linter for Go?", "how should I split these folders?") — answer from the relevant step only, still applying the research and learning rules below. Don't force the whole process on a small question.
 
 ## Working rules
@@ -27,6 +27,7 @@ The user is often still building judgment. The goal is not only a working setup 
 - **Stop at decisions.** Propose, explain, and let the user choose at each checkpoint marked ⛳. Don't silently install packages, scaffold structure, or pick libraries on their behalf.
 - **Context beats "best practice".** There is no best practice without a context. An enterprise layout in a solo weekend project is slop. Tie every recommendation back to the brief from step 0.
 - **Less is more.** Prefer fewer dependencies, fewer layers, one way to do each thing. Every addition must earn its place.
+- **Match the user's language.** Reply in the language the user writes in. If the skill is invoked with no message text, use the language of the conversation so far, or English if there is none. Tool names and config keys stay as they are.
 
 ## Step 0 — Brief, then restate
 
@@ -36,10 +37,11 @@ Then restate it **in your own words** before doing anything else:
 
 - **Goal** — what you understand they want
 - **Constraints**
-- **Done means** — what the finished foundation includes
+- **Done means (proposed)** — what the finished foundation would include. This is a draft scope, not a decision: tag any item that depends on an open question with that question (e.g. "CI pipeline — depends on Q2"), and leave out items the user hasn't had a chance to choose yet. Step 0 frames the decisions; it doesn't make them.
 - **Out of scope**
 - **Assumptions I'm filling in** — the most important part; surface what was not said
-- **Open questions**
+- **Early findings** (audit mode only) — the few highest-leverage gaps, plus anything already done well that's worth building on. Mark them as not acted on yet.
+- **Open questions** — numbered, so "Done means" items can point at them
 
 ⛳ Wait for the user to confirm or correct. Parroting the request back is useless; the value is in exposing hidden assumptions.
 
@@ -117,5 +119,3 @@ Call these out when you see them, in the user's project or in your own proposals
 ## Output
 
 At the end, give a short foundation summary: chosen tool per slot, chosen structure (with ADR links), where the golden example lives, which checks run where, what was verified, and what's still open.
-
-Converse in the user's language.
